@@ -2,7 +2,7 @@ package com.cwp;
 
 import java.util.Scanner;
 import java.io.*;
-//import com.cwp.Constant;
+import com.cwp.Constants;
 import java.util.regex.*;
 public class ReadDirFiles {
 
@@ -36,7 +36,7 @@ public class ReadDirFiles {
 	    } //end while loop
 		//System.out.print("123");
 		//path exists, check for all .txt files present
-		Pattern fileExtPattern = Pattern.compile("[a-zA-Z0-9][a-zA-Z0-9$_.]*[.]txt");
+		Pattern fileExtPattern = Pattern.compile(Constants.fileExtensionRegx);
 		if(filesOrDirectName != null)
 		{
 			//System.out.print("hey456");
@@ -58,18 +58,18 @@ public class ReadDirFiles {
 				        while((line = br.readLine()) != null)
 				            {  
 				            //Splits each line into words  
-				            String words[] = line.split("\\s+");
+				            String words[] = line.split(Constants.wordSplitRegx);
 				            //System.out.println(words[]);
 				             for(String word: words)
 				                 {
-				            	 fileExtPattern = Pattern.compile("^[Mm].");
+				            	 fileExtPattern = Pattern.compile(Constants.wordCheckRegx);
 				            	  matchPattern = fileExtPattern.matcher(word);
 				            	   if(matchPattern.find() )//&& matchPattern.group().equals(word))
 				            	  {
 				            		  //System.out.println(word);
 				            		  count++;
 				            	  }
-				            	   if(word.length()>5)
+				            	   if(word.length()>Constants.wordLength)
 				            	   {
 				            		   System.out.println(word);
 				            	   }
