@@ -11,15 +11,24 @@ Hints
 - Business rules change and new ones pop up all the time; how will you account for this?
 - Please don't input words from standard input, no one likes to type long list of names manually.
 
+Assumptions: 
+provide directory/path, this program will process only .txt file 
+
 Apparoach :
 1.Get The Directory From User
+
 2.Check Directory Exists 
    if not,
    ask again
 3. Get the all files with .txt extension
+
 4. Implement Business Logic
    get all the words starts with m or M , add to ArrayList
    get all the words longer than five character
    
-5.Display alll words   
+5.Display alll words 
+
+System Requirements:
+run on java 15 or above.
+if possible, export on eclipse latest edition
    
