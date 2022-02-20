@@ -5,7 +5,7 @@ import java.io.*;
 import com.cwp.Constants;
 import java.util.regex.*;
 public class ReadDirFiles {
-
+/*
 	public static void main(String[] args) throws Exception
 	{
 		// TODO Auto-generated method stub
@@ -64,7 +64,7 @@ public class ReadDirFiles {
 				                 {
 				            	 fileExtPattern = Pattern.compile(Constants.wordCheckRegx);
 				            	  matchPattern = fileExtPattern.matcher(word);
-				            	   if(matchPattern.find() )//&& matchPattern.group().equals(word))
+				            	   if(matchPattern.find() && matchPattern.group().equals(word))
 				            	  {
 				            		  //System.out.println(word);
 				            		  count++;
@@ -92,4 +92,6 @@ public class ReadDirFiles {
 			System.out.println("Empty Directory");
 		}
 }
+*/
+	
 }
